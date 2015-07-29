@@ -11,15 +11,20 @@ class ApplicationController < ActionController::Base
     a.name = params['name']
     a.email = params['email']
     a.save
-    redirect_to"/user/{a.id}"
+    redirect_to "http://ruby-on-rails-114444.nitrousapp.com:3000/user/#{a.id}"
   end
   
   def show
     @user = User.find_by_id(params['id'])
   end
   
-  def destroy
-  a= User.find_by_id(params['id'])
-  a.destroy
+  def index
+   @user = User.all
 end
+  
+  def destroy
+    a = User.find_by_id(params['id'])
+    a.destroy
+end
+
 end

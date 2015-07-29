@@ -1,0 +1,11 @@
+<%= @user.each %>
+  <div class="stripe">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <a href="/user/<%= user.id %>"><img src="<%= user.url %>" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
